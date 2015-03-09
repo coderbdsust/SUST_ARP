@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Menu</title>
+        <link rel="stylesheet"  href="css/style.css"/>
+    </head>
+
+    <body class="body">
+
+        <div class="mainview" align="center">
+            <header>
+                <h2>SUST Admission Result Processing System</h2>
+            </header>
+
+            <div class="mainbody">
+                <div class="indexview" align="center">
+                    <form action="homeServlet" method="post" >
+                        <input type="hidden" value="menu" name="methodName"/>
+                        <div class="menubutton">
+                            <ul>
+                                <li><input type="submit" value="Admin" name="choiceButton"/></li>
+                                <li><input type="submit" value="Generation" name="choiceButton"/></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p><a href="index.html">Home</a></p>
+                <p>Developed By: SUST-CSE</p>
+            </div> 
+            
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Account Login</title>
+        <link rel="stylesheet"  href="css/style.css"/>
+    </head>
+
+    <body>
+
+        <div class="mainview" align="center">
+
+            <header>
+                <h2>SUST ADMISSION RESULT PROCESSING SYSTEM</h2>
+            </header>
+
+            <div class="mainbody">
+                <div class="loginview">
+
+                    <form action="homeServlet" method="post">
+                        <input type="hidden" value="login" name="methodName"/>
+                        <div class="loginfield">
+                            <ul>
+
+                                <li>
+                                    <input type="text" name="username" placeHolder="Username"/>
+                                </li>
+
+                                <li>
+                                    <input type="password" name="password" placeHolder="Password"/>
+                                </li>
+
+                                <li>
+                                    <input type="submit" value="Login" name="choiceButton"/>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p><a href="index.html">Home</a></p>
+                <p>Developed By: SUST-CSE</p>
+            </div> 
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin Page</title>
+        <link rel="stylesheet"  href="css/reset.css"/>
+        <link rel="stylesheet"  href="css/style.css"/>
+        <link rel="stylesheet"  href="css/admin.css"/>
+    </head>
+
+    <body>
+
+        <div class="mainview" align="center">
+            <header>
+                <h2>SUST ADMISSION RESULT PROCESSING SYSTEM</h2>
+            </header>
+
+            <div class="mainbody">
+
+                <div class="blockView" align="center">
+
+                    <div class="unitGroupBlock">
+
+                        <div class="unitGroupViewBlock">
+                            <div class="adminHeader">
+                                <h1>Unit : Group</h1>
+                            </div>
+                            
+                            <form id="UGVForm" name="UGVForm">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Unit Name</th>
+                                            <th>Group</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="unitGroupTbody">
+
+                                    </tbody>
+
+
+                                </table>   
+
+                            </form>
+
+                        </div>            		
+
+                        <div class="unitGroupInputBlock">
+                            <form id="UGIForm" name="UGIForm">
+                                <input type="hidden" value="unitGroup" name="methodName"/>
+                                <ul>
+                                    <li>
+                                        <input type="text" id="unitName" name="unitName" placeHolder="Unit Name"/>
+                                        <input type="text" id="groupNo" name="groupNo" placeholder="Group No"/>
+                                        <input type="button" value="Add" name="operation" onclick="unitGroupController(event)" />
+
+                                    </li>
+                                    <li>
+                                        <input type="button" id="deleteButtonU" value="Delete" name="operation" onclick="unitGroupController(event)" />
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                    <div class="positionBlock">
+
+                        <div class="positionViewBlock">
+                            <div class="adminHeader">
+                                <h1>Position Type</h1>
+                            </div>
+                            <form id="PVForm" name="PVForm">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Position Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="positionTbody">
+
+                                    </tbody>
+
+                                </table>       					
+                            </form>
+
+                        </div>   
+
+                        <div class="positionInputBlock">
+                            <form id="PIForm" name="PIForm">
+                                <input type="hidden" value="positionType" name="methodName"/>
+                                <ul>
+                                    <li>
+                                        <input type="text" id="positionType" name ="positionType" placeholder="Position Type"/>
+                                        <input type="button" value="Add" name="operation" onclick="positionTypeController(event)" />
+                                    </li>
+                                    <li>
+
+                                        <input type="button" id="deleteButtonP" value="Delete" name="operation" onclick="positionTypeController(event)" />
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                    <div class="quotaBlock">
+
+                        <div class="quotaViewBlock">
+                            <h1>Quota</h1>
+                            <form id="QVForm" name="QVForm">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Quota Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="quotaTbody">
+
+                                    </tbody>
+                                </table>       					
+                            </form>
+
+                        </div>   
+
+                        <div class="quotaInputBlock">
+                            <form id="QIForm" name="QIForm">
+                                <input type="hidden" value="quota" name="methodName"/>
+                                <ul>
+                                    <li>
+                                        <input type="text" id="quotaName" name ="quotaName" placeholder="Quota Name"/>
+                                        <input type="button" value="Add" name="operation" onclick="quotaController(event)" />
+                                    </li>
+                                    <li>
+
+                                        <input type="button" id="deleteButtonQ" value="Delete" name="operation" onclick="quotaController(event)" />
+                                    </li>
+                                </ul>	                					
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="footer">
+                <p><a href="index.html">Home</a></p>
+                <p>Developed By: SUST-CSE</p>
+            </div> 
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/adminjquery.js"></script>
+        <script src="js/check.js"></script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+/*
+***********************************
+||= This design for admin.html page
+***********************************
+*/
+
+.blockView{
+    
+    height: 100%;
+    width: 100%;
+}
+
+.blockView h1{
+    font-size: 25px;
+    text-transform: uppercase;;
+    color: black;
+}
+
+.blockView table{
+    margin-top: 8px;
+}
+
+.blockView th{
+    min-width: 130px;
+}
+
+.blockView ul{
+    padding-top: 10px;
+}
+
+.blockView ul li{
+    padding-top: 4px;
+}
+
+.unitGroupBlock{
+    
+    width: 33%;
+    height: 100%;
+    float: left;
+
+}
+
+.positionBlock{
+    
+    width: 34%;
+    height: 100%;
+    float: left;
+
+}
+
+
+.quotaBlock{
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+
+.unitGroupViewBlock{
+    background-color: rgba(255,255,255,.40);
+    width: 100%;
+    height: 82%;
+}
+
+.positionViewBlock{
+   background-color: rgba(255,255,255,.60);
+   width: 100%;
+   height: 82%;
+   
+}
+
+.quotaViewBlock{
+    background-color: rgba(255,255,255,.40);
+    width: 100%;
+    height: 82%;
+}
+
+
+.unitGroupInputBlock{
+    background-color: rgba(164,164,164,.50);
+    width: 100%;
+    height: 18%;
+}
+
+.positionInputBlock{
+   background-color: rgba(255,255,255,.25);
+   width: 100%;
+   height: 18%;
+   
+}
+
+.quotaInputBlock{
+    background-color: rgba(164,164,164,.50);
+    width: 100%;
+    height: 18%;
+}
+
+
+
+.unitGroupBlock input[type="text"]{
+    width: 100px;
+    padding-left: 4px;
+}
+
+
+.unitGroupInputBlock input[type="button"]{
+    width: 60px;
+}
+
+
+.positionBlock input[type="text"]{
+    width: 160px;
+}
+
+
+.positionInputBlock  input[type="button"]{
+    width: 80px;
+}
+
+
+.quotaInputBlock input[type="text"]{
+    width: 160px;
+}
+
+
+.quotaInputBlock input[type="button"]{
+    width: 80px;
+}
+
+
+#deleteButtonU{
+	width: 150px;
+}
+
+#deleteButtonP{
+	width: 150px;
+}
+
+#deleteButtonQ{
+	width: 150px;
+}
+
