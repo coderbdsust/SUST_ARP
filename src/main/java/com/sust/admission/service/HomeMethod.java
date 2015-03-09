@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -28,6 +30,9 @@ public class HomeMethod {
     private static RequestDispatcher requestDispatcher;
     private static String DEFAULTUSER = "admin.sust";
     private static String DEFAULTPASS = "sust";
+    
+ 
+    
 
     public static void indexPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String pageSelected = request.getParameter("choiceButton");
@@ -43,11 +48,14 @@ public class HomeMethod {
     }
 
     public static void loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        
+        UserAccount account = new UserAccount();
+        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        User user = new User(username, password);
 
-        if (username.equals(DEFAULTUSER) && password.equals(DEFAULTPASS)) {
+        if (account.isUserValid(user)) {
             requestDispatcher = request.getRequestDispatcher("/menu.html");
             requestDispatcher.forward(request, response);
         } else {
