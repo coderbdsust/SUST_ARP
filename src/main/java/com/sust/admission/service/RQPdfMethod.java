@@ -5,11 +5,12 @@
  */
 package com.sust.admission.service;
 
-import com.sust.admission.pdfgeneration.PdfService;
 import com.itextpdf.text.DocumentException;
 import com.sust.admission.constant.DbUser;
 import com.sust.admission.databaseservice.DatabaseService;
 import com.sust.admission.databaseservice.GetQuery;
+import com.sust.admission.debug.Debugger;
+import com.sust.admission.pdfgeneration.PdfService;
 import com.sust.admission.resultdataprocess.PersonResult;
 import com.sust.admission.resultdataprocess.PersonToInterview;
 import com.sust.admission.resultdataprocess.ResultRawData;
@@ -42,8 +43,10 @@ public class RQPdfMethod {
             DbUser.PASSWORD
     );
 
-    private static List list = new ArrayList(), topSheetList = new ArrayList();
+    private static List list = new ArrayList();
+    private static List topSheetList = new ArrayList();
     private static ResultSet resultSet;
+    private static Debugger log = new Debugger(true);
 
     public static void editResultQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException, DocumentException {
 
@@ -186,11 +189,6 @@ public class RQPdfMethod {
 
             String meritList;
 
-//            if (groupName.equals("0")) {
-//                meritList = "Unit: " + unitName;
-//            } else {
-//                meritList = "Unit: " + unitName + " Group: " + groupName;
-//            }
             if (!Checker.isNumber(groupName)) {
                 meritList = "Unit: " + unitName + " (" + groupName + ")";
             } else {
@@ -266,15 +264,15 @@ public class RQPdfMethod {
             String priority = (String) itr.next();
             String meritList;
             System.out.println(":::::::::::::::::DEBUG LOG ::::::::::::::");
-            debugLog("Key: ", key);
-            debugLog("Unit Name: ", unitName);
-            debugLog("Group No: ", groupName);
-            debugLog("PosType: ", posTypeName);
-            debugLog("Quota: ", quotaName);
-            debugLog("Start Position: ", startPosition);
-            debugLog("End Position: ", endPosition);
-            debugLog("Pdf No :", pdfNo);
-            debugLog("Priority : ", priority);
+            log.debugLog("Key: ", key);
+            log.debugLog("Unit Name: ", unitName);
+            log.debugLog("Group No: ", groupName);
+            log.debugLog("PosType: ", posTypeName);
+            log.debugLog("Quota: ", quotaName);
+            log.debugLog("Start Position: ", startPosition);
+            log.debugLog("End Position: ", endPosition);
+            log.debugLog("Pdf No :", pdfNo);
+            log.debugLog("Priority : ", priority);
 
 //            if (groupName.equals("0")) {
 //                meritList = "Unit: " + unitName;
@@ -315,12 +313,5 @@ public class RQPdfMethod {
     /*
      topSheet End
      */
-
-    public static void debugLog(Object... values) {
-        for (Object value : values) {
-            System.out.print(value + " ");
-        }
-        System.out.println("");
-    }
 
 }
