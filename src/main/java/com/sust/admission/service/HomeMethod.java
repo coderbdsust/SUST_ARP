@@ -28,10 +28,6 @@ import jdk.nashorn.internal.runtime.DebugLogger;
 public class HomeMethod {
 
     private static RequestDispatcher requestDispatcher;
-    private static String DEFAULTUSER = "admin.sust";
-    private static String DEFAULTPASS = "sust";
-    
- 
     
 
     public static void indexPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -50,7 +46,6 @@ public class HomeMethod {
     public static void loginUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
         UserAccount account = new UserAccount();
-        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = new User(username, password);
